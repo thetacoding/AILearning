@@ -56,7 +56,7 @@ gpt2/
 
 ```json
 {
-  "activation_function": "gelu_new",    // 前馈网络中的激活函数
+  "activation_function": "gelu_new",    // 激活函数【激活函数负责引入“非线性”思考（类似于：如果信号低于某个阈值，就忽略它；如果高于某个阈值，就兴奋地传导下去）】
   "architectures": [    // 模型类名称
     "GPT2LMHeadModel"
   ],
@@ -70,7 +70,7 @@ gpt2/
   "n_ctx": 1024,    // 上下文窗口长度，GPT-2 中通常和 `n_positions` 接近或一致
   "n_embd": 768,    // 隐藏层维度，也就是 token embedding 和 Transformer 隐状态的维度
   "n_head": 12, // 注意力头数量
-  "n_layer": 12,    // Transformer block 层数
+  "n_layer": 12,    // 层数
   "n_positions": 1024,  // 模型支持的位置编码长度
   "resid_pdrop": 0.1,   // 残差连接 dropout 概率
   "summary_activation": null,
@@ -84,7 +84,7 @@ gpt2/
       "max_length": 50
     }
   },
-  "vocab_size": 50257   // 词表大小
+  "vocab_size": 50257   // 词表大小【模型只认识50257个token】
 }
 ```
 
